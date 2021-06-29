@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0066F5</color>
+    <color name="primaryDark">#414BBE</color>
+    <color name="success">#00C286</color>
+    <color name="danger">#FF4062</color>
+    <color name="info">#FEC840</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#525252</color>
+    <color name="gray">#858585</color>
+    <color name="light">#eeeeee</color>
+    <color name="transparent">#00000000</color>
+</resources>
