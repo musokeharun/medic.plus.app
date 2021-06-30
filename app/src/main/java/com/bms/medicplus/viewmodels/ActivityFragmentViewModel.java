@@ -1,8 +1,8 @@
-package com.bms.medicplus.register.fragments;
+package com.bms.medicplus.viewmodels;
 
 import android.os.Bundle;
 
-import androidx.lifecycle.LiveData;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -14,9 +14,14 @@ public class ActivityFragmentViewModel extends ViewModel {
     public static final String EXTRA = "EXTRA";
     public static final String FRAGMENT_CLASS = "FRAGMENT_CLASS";
 
-    private final MutableLiveData<Bundle> fragmentNotice = new MutableLiveData<Bundle>();
+    private final MutableLiveData<Bundle> data = new MutableLiveData<>();
 
-    public LiveData<Bundle> fragmentNotice() {
-        return fragmentNotice;
+    public void setData(Bundle notice) {
+        data.setValue(notice);
     }
+
+    public MutableLiveData<Bundle> getData() {
+        return data;
+    }
+
 }

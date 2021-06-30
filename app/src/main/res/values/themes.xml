@@ -17,12 +17,12 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
         <!-- enable window content transitions -->
-        <item name="android:windowActivityTransitions">true</item>
+<!--        <item name="android:windowActivityTransitions">true</item>-->
         <!-- specify enter and exit transitions -->
-        <item name="android:windowEnterTransition">@transition/explode</item>
-        <item name="android:windowExitTransition">@transition/explode</item>
+<!--        <item name="android:windowEnterTransition">@transition/explode</item>-->
+<!--        <item name="android:windowExitTransition">@transition/explode</item>-->
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/fs_sm</item>
+        <item name="android:textSize">@dimen/fs_sub</item>
 
     </style>
 
@@ -44,6 +44,9 @@
         <item name="boxStrokeWidth">0dp</item>
         <item name="boxStrokeWidthFocused">0dp</item>
         <item name="boxStrokeErrorColor">@color/danger</item>
+        <item name="editTextColor">@color/black</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/fs_sub</item>
     </style>
 
     <style name="App.Bms.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
@@ -55,7 +58,7 @@
         <item name="colorOnSecondary">@color/success</item>
         <item name="fontFamily">@font/semibold</item>
         <item name="cornerRadius">8dp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="App.Bms.Button" parent="Theme.MedicPlus">
@@ -67,7 +70,7 @@
         <item name="cornerRadius">8dp</item>
         <item name="colorOnSecondary">@color/success</item>
         <item name="fontFamily">@font/semibold</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="App.Bms.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -79,8 +82,11 @@
         <item name="colorSecondaryVariant">@color/info</item>
         <item name="colorOnSecondary">@color/success</item>
         <item name="fontFamily">@font/semibold</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="App.Bms.BottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+
+    </style>
 
 </resources>

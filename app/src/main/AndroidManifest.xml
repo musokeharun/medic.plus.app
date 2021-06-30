@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicPlus">
+        <activity android:name=".home.Home"></activity>
+        <activity android:name=".auth.Login" />
         <activity
-            android:name=".register.Register"
+            android:name=".auth.Register"
             android:launchMode="singleTop" />
         <activity android:name=".OnBoarding" />
         <activity

@@ -1,4 +1,4 @@
-package com.bms.medicplus.register.fragments;
+package com.bms.medicplus.auth.fragments;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.bms.medicplus.R;
+import com.bms.medicplus.viewmodels.ActivityFragmentViewModel;
 
 public class UserTypeFragment extends Fragment {
 

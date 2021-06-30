@@ -14,8 +14,8 @@
     <dimen name="padding_xl">24dp</dimen>
     <dimen name="padding_xxl">48dp</dimen>
 
-    <dimen name="fs_sm">12dp</dimen>
-    <dimen name="fs_sub">15dp</dimen>
-    <dimen name="fs_h2">18dp</dimen>
-    <dimen name="fs_h1">24dp</dimen>
+    <dimen name="fs_sm">12sp</dimen>
+    <dimen name="fs_sub">15sp</dimen>
+    <dimen name="fs_h2">18sp</dimen>
+    <dimen name="fs_h1">24sp</dimen>
 </resources>

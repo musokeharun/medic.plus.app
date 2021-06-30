@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 import com.bms.medicplus.adapters.BoardingAdapter;
 import com.bms.medicplus.models.Boarding;
-import com.bms.medicplus.register.Register;
+import com.bms.medicplus.auth.Register;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;

@@ -9,4 +9,26 @@
     <string name="skip">Skip</string>
     <string name="login">Login</string>
     <string name="create_account">Create Account</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="terms_text">By continuing, you agree to out Terms and Conditions.</string>
+    <string name="already_account_">Already have an account ? Login</string>
+    <string name="already_account">
+        <font color="@color/black">Already have an account ?</font>
+        <font color="@color/primary">Login</font>
+    </string>
+    <string name="lets_get_started">Lets get started with creating your account.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="complete_registration">Complete registration to connect with better impression.</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="complete">Complete</string>
+    <string name="confirm">Confirm</string>
+    <string name="otp_head">Enter the 4 digit we sent to 0772 588 020 </string>
+    <string name="otp_resend">Resend code 00:30</string>
+    <string name="login_title">Enter your credentials to continue.</string>
+    <string name="dont_have_an_account">Don\'t have an account yet? Register</string>
 </resources>

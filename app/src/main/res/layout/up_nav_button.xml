@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tint="@color/black"
+    android:background="@drawable/white_round_small"
+    android:layout_gravity="center_vertical"
+    android:scaleType="centerCrop"
+    android:layout_margin="1dp"
+    android:elevation="2dp"
+    android:padding="@dimen/padding_sm"
+    android:src="@drawable/back" />
