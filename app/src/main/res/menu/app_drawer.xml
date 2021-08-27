@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/house"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/drawer_search"
+            android:icon="@drawable/bugs"
+            android:title="Search" />
+
+        <item
+            android:id="@+id/nav_cycle"
+            android:icon="@drawable/consulting"
+            android:title="Consultation" />
+
+        <item
+            android:id="@+id/nav_bus"
+            android:icon="@drawable/vitamin"
+            android:title="Pharmacy" />
+
+        <item
+            android:id="@+id/nav_plane"
+            android:icon="@drawable/notification"
+            android:title="Notifications" />
+    </group>
+
+    <item android:title="Other">
+
+        <menu>
+
+            <group>
+
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/alert"
+                    android:title="Emergency" />
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/report"
+                    android:title="Report Problem" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout"
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="App">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/rating"
+                android:title="Rate Us" />
+        </menu>
+    </item>
+</menu>

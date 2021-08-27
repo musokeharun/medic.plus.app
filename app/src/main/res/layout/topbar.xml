@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/transparent"
+    android:elevation="0dp"
+    app:elevation="0dp"
+    app:layout_insetEdge="none">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/nav_or_up"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/margin_md"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/black" />
+
+
+            <TextView
+                android:id="@+id/top_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/extrabold"
+                android:gravity="center"
+                android:text="@string/pharmacy"
+                app:layout_constraintEnd_toStartOf="@id/top_action"
+                app:layout_constraintStart_toEndOf="@id/nav_or_up" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/top_action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/margin_md"
+                android:src="@drawable/shopping_cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

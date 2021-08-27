@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_lg"
+        android:paddingVertical="@dimen/padding_lg">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:paddingVertical="@dimen/padding_lg"
+            android:text="@string/let_s_find"
+            android:textSize="@dimen/fs_h1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/search_box"
+            layout="@layout/search_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_title" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/categoryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:paddingVertical="@dimen/padding_xl"
+            android:text="@string/browse_by_categories"
+            android:textSize="@dimen/fs_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_box" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gridCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/grid"
+            app:layout_constraintBottom_toBottomOf="@id/categoryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/categoryText"
+            app:srcCompat="@drawable/grid" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/listCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/list"
+            app:layout_constraintBottom_toBottomOf="@id/categoryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/categoryText"
+            app:srcCompat="@drawable/list" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_lg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryText"
+            app:spanCount="3" />
+
+
+        <FrameLayout
+            android:id="@+id/adNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categories" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scheduleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:paddingVertical="@dimen/padding_xl"
+            android:text="@string/upcoming_schedules"
+            android:textSize="@dimen/fs_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adNotice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/light"
+            android:gravity="center"
+            android:text="See All"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/fs_sub"
+            app:layout_constraintBottom_toBottomOf="@id/scheduleText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/scheduleText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/schedules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_lg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scheduleText"
+            app:spanCount="3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/topDoctorText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:paddingVertical="@dimen/padding_xl"
+            android:text="@string/top_doctors"
+            android:textSize="@dimen/fs_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/schedules" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/light"
+            android:gravity="center"
+            android:text="@string/see_more"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/fs_sub"
+            app:layout_constraintBottom_toBottomOf="@id/topDoctorText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/topDoctorText" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topDoctors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_lg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topDoctorText"
+            app:spanCount="3" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/articlesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:paddingVertical="@dimen/padding_xl"
+            android:text="@string/health_articles"
+            android:textSize="@dimen/fs_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topDoctors" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_lg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/articlesText"
+            app:spanCount="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

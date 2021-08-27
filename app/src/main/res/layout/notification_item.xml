@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/container_view"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_md">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="@dimen/iconSizeLg"
+            android:layout_height="@dimen/iconSizeLg"
+            android:background="@drawable/light_round_sm"
+            android:padding="@dimen/padding_md"
+            android:src="@drawable/stopwatch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:text="Just now"
+            android:textSize="@dimen/fs_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_md"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/notification_icon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notification_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:fontFamily="@font/semibold"
+                android:gravity="top|start"
+                android:text="Meeting starting soon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notification_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:gravity="bottom|start"
+                android:lines="1"
+                android:text="Tap to join Dr.Luzinda in the meeting..." />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

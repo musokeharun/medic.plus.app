@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginVertical="@dimen/margin_sm"
+    android:layout_marginStart="@dimen/margin_sm"
+    android:background="@drawable/light_round_sm">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/primary"
+        android:foregroundTint="@color/white"
+        android:padding="@dimen/padding_sm"
+        app:layout_constraintBottom_toTopOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/light"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/padding_sm"
+        android:text="Cardiologist"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fs_sm"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

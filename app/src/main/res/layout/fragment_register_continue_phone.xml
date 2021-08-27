@@ -32,13 +32,22 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginVertical="4dp"
-                android:background="@drawable/user"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="@dimen/padding_md"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/uploadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_md"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar" />
+
+            </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"

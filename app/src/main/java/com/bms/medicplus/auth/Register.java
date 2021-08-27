@@ -1,6 +1,7 @@
 package com.bms.medicplus.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -36,23 +37,18 @@ public class Register extends AppCompatActivity implements ActivityFragmentCommu
         progressBar = findViewById(R.id.progress);
         topAppBar = findViewById(R.id.topAppBar);
         appBarLayout = findViewById(R.id.topAppBarLayout);
-        topAppBar.setTitle("Get Started");
 
         fragmentManager = getSupportFragmentManager();
         viewModel = new ViewModelProvider(this).get(ActivityFragmentViewModel.class);
-        getSupportFragmentManager().addOnBackStackChangedListener(() -> {
-            Toast.makeText(this, "Stack Changed", Toast.LENGTH_SHORT).show();
-        });
+        getSupportFragmentManager().addOnBackStackChangedListener(() -> Toast.makeText(this, "Stack Changed", Toast.LENGTH_SHORT).show());
     }
 
     private void customiseToolBar(String app_title, Boolean is_nav_enabled) {
         topAppBar.setTitle(app_title);
         if (is_nav_enabled) {
             if (topAppBar.getNavigationIcon() == null) {
-                topAppBar.setNavigationIcon(getResources().getDrawable(R.drawable.up_nav_icon));
-                topAppBar.setNavigationOnClickListener(v -> {
-                    handleBackNavigation();
-                });
+                topAppBar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.back, getTheme()));
+                topAppBar.setNavigationOnClickListener(v -> handleBackNavigation());
             }
         } else {
             topAppBar.setNavigationIcon(null);
@@ -83,13 +79,15 @@ public class Register extends AppCompatActivity implements ActivityFragmentCommu
         setProgressBarVisibility(View.VISIBLE);
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-//                .setCustomAnimations(
-//                        R.anim.slide_in_right,
-//                        android.R.animator.fade_out
-//                );
-                .replace(R.id.registerFragmentContainer, fragment).runOnCommit(() -> {
-            setProgressBarVisibility(View.GONE);
-        });
+                .setCustomAnimations(
+                        R.anim.slide_in,
+                        R.animator.fade_out,
+                        R.anim.slide_left,
+                        R.animator.fade_out
+                ).replace(R.id.registerFragmentContainer, fragment)
+                .addToBackStack(fragment.getClass().getName())
+                .commit();
+        setProgressBarVisibility(View.GONE);
 
     }
 }

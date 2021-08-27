@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="0dp"
+    tools:context=".pharmacy.Pharmacy">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/topbar" />
+
+        <include
+            android:id="@+id/search_box"
+            layout="@layout/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_md"
+            android:layout_marginVertical="@dimen/margin_sm" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pharmacy_categories_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/padding_md"
+            android:paddingStart="@dimen/padding_sm"
+            android:paddingEnd="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="1"
+
+            tools:listitem="@layout/categories_card" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -14,7 +14,7 @@
         android:orientation="vertical"
         tools:context="com.bms.medicplus.auth.fragments.RegisterFormFragment">
 
-        <include layout="@layout/toolbar" />
+        <include layout="@layout/generic_toolbar" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"

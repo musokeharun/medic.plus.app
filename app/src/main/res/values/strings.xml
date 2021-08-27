@@ -31,4 +31,17 @@
     <string name="otp_resend">Resend code 00:30</string>
     <string name="login_title">Enter your credentials to continue.</string>
     <string name="dont_have_an_account">Don\'t have an account yet? Register</string>
+    <string name="let_s_find">Let\'s Find Your Doctor</string>
+    <string name="search_hint">Search for a doctor or health issue</string>
+    <string name="browse_by_categories">Browse by Categories</string>
+    <string name="upcoming_schedules">Upcoming Schedules</string>
+    <string name="top_doctors">Top Doctors</string>
+    <string name="health_articles">Health Articles</string>
+    <string name="see_all">See All</string>
+    <string name="see_more">See More</string>
+    <string name="add_appointment">Add Appointment</string>
+    <string name="navigation_drawer_open">Drawer Open\\</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+    <string name="update">Update</string>
+    <string name="pharmacy">Pharmacy</string>
 </resources>

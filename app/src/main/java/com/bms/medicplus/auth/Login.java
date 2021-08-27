@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         boolean isStill = getIntent().getBooleanExtra(Constants.AM_STILL_HERE.name(), false);
         toolbar.setTitle(getResources().getString(R.string.login));
         if (isNav) {
-            toolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.up_nav_icon, getTheme()));
+            toolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.back, getTheme()));
             toolbar.setNavigationOnClickListener(v -> {
                 finish();
             });
